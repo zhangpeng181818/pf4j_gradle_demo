@@ -1,0 +1,31 @@
+### Git
+.git
+
+### Gradle
+.gradle
+build/
+**/build/
+out/
+gradle/
+gradlew.bat
+gradlew
+!gradle/wrapper/gradle-wrapper.jar
+
+### IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### Mac
+.DS_Store
+**/.DS_Store
+
+logs/
+**/logs
+*.log
+*.zip
+base-job/xxl-job-admin/target/*
+med-config/src/main/resources/*
+*.yml

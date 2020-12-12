@@ -1,0 +1,3 @@
+rootProject.name = 'pf4j_gradle_demo'
+include 'plugin1'
+

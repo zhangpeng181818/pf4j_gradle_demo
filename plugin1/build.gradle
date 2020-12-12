@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+ext {
+    pluginId="welcome-plugin"
+    pluginClass="welcome.WelcomePlugin"
+    pluginVersion="0.0.1"
+    pluginProvider="Decebal Suiu"
+}
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Plugin-Class': "${pluginClass}",
+                'Plugin-Id': "${pluginId}",
+                'Plugin-Version': "${pluginVersion}",
+                'Plugin-Provider': "${pluginProvider}"
+    }
+}
+
+dependencies {
+    compile project(':')
+
+    implementation 'org.pf4j:pf4j:3.5.0'
+    annotationProcessor 'org.pf4j:pf4j:3.5.0'
+    compile 'commons-lang:commons-lang:2.6'
+}
